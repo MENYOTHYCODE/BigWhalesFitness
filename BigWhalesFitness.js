@@ -67,17 +67,17 @@ function initDropdownNav() {
         <div class='bg-[#3d5a80] shadow-2xl rounded-xl p-6 grid grid-cols-3 gap-6 w-[850px]'>
 
                 <div>
-                    <img src='assets/strenght training.avif' class='rounded-lg h-40 w-full object-cover'>
+                    <img src='Assets/strenght training.avif' class='rounded-lg h-40 w-full object-cover'>
                     <h3 class='font-semibold mt-3'>Strength Training</h3>
                     <p class='text-sm text-gray-100'>Build muscle with coach-led power sessions.</p>
                 </div>
                 <div>
-                    <img src='assets/HIIT.avif' class='rounded-lg h-40 w-full object-cover'>
+                    <img src='Assets/HIIT.avif' class='rounded-lg h-40 w-full object-cover'>
                     <h3 class='font-semibold mt-3'>HIIT</h3>
                     <p class='text-sm text-gray-100'>High-intensity bursts to torch calories fast.</p>
                 </div>
                 <div>
-                    <img src='assets/yoga and recovery.avif' class='rounded-lg h-40 w-full object-cover'>
+                    <img src='Assets/yoga and recovery.avif' class='rounded-lg h-40 w-full object-cover'>
                     <h3 class='font-semibold mt-3'>Yoga & Recovery</h3>
                     <p class='text-sm text-gray-100'>Flexibility, balance, and peace of mind.</p>
                 </div>
@@ -87,12 +87,12 @@ function initDropdownNav() {
         apps: `
         <div class='bg-[#3d5a80] shadow-2xl rounded-xl p-6 grid grid-cols-2 gap-6 w-[650px]'>
            <div>
-                <img src='assets/app.webp' class='rounded-lg h-40 w-full object-cover'>
+                <img src='Assets/app.webp' class='rounded-lg h-40 w-full object-cover'>
                 <h3 class='font-semibold mt-3'>BigWhale App</h3>
                 <p class='text-sm text-gray-100'>Track workouts, book sessions, and stay motivated anywhere.</p>
            </div>
            <div>
-                <img src='assets/wristwatch.webp' class='rounded-lg h-40 w-full object-cover'>
+                <img src='Assets/wristwatch.webp' class='rounded-lg h-40 w-full object-cover'>
                 <h3 class='font-semibold mt-3'>Wearables</h3>
                 <p class='text-sm text-gray-100'>Seamless sync with your smartwatch for live performance data.</p>
            </div>
@@ -102,17 +102,17 @@ function initDropdownNav() {
         accessories: `
         <div class='bg-[#3d5a80] shadow-2xl rounded-xl p-6 grid grid-cols-3 gap-6 w-[850px]'>
            <div>
-                <img src='assets/bands.avif' class='rounded-lg h-40 w-full object-cover'>
+                <img src='Assets/bands.avif' class='rounded-lg h-40 w-full object-cover'>
                 <h3 class='font-semibold mt-3'>Resistance Bands</h3>
                 <p class='text-sm text-gray-100'>Compact tools for toning anytime, anywhere.</p>
            </div>
            <div>
-                <img src='assets/dumbell.png' class='rounded-lg h-40 w-full object-cover'>
+                <img src='Assets/dumbell.png' class='rounded-lg h-40 w-full object-cover'>
                 <h3 class='font-semibold mt-3'>Dumbbells</h3>
                 <p class='text-sm text-gray-100'>Perfect weights for any level of training.</p>
            </div>
            <div>
-                <img src='assets/gym gloves.jpg' class='rounded-lg h-40 w-full object-cover'>
+                <img src='Assets/gym gloves.jpg' class='rounded-lg h-40 w-full object-cover'>
                 <h3 class='font-semibold mt-3'>Gym Gloves</h3>
                 <p class='text-sm text-gray-100'>Grip better and protect your hands during lifts.</p>
            </div>

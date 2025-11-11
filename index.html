@@ -4,519 +4,517 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>BigWhale Gym</title>
-  <!-- Tailwind via CDN (for prototyping) -->
+  <!-- TailwindLib -->
   <script src="TailwindLib.js"></script>
+  <!-- Favicon -->
   <link rel="icon" type="image/png" href="Assets/bigwhales favicon.png" class="bg-blue-700">
-  <!-- Open Graph (Facebook, WhatsApp, LinkedIn) -->
-<meta property="og:title" content="BigWhaleFitness | Transform Your Fitness">
-<meta property="og:description" content="Join BigWhaleFitness today — where strength meets results.">
-<meta property="og:image" content="https://big-whales-fitness.vercel.app/Assets/banner.png">
-<meta property="og:url" content="https://big-whales-fitness.vercel.app/">
-<meta property="og:type" content="website">
-
-<!-- Twitter Card (optional but nice to include) -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://big-whales-fitness.vercel.app/Assets/banner.png">
-
-
-
+  <!-- AOS Animation -->
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Bebas+Neue&display=swap" rel="stylesheet">
+  <!-- Open Graph (Facebook, WhatsApp, LinkedIn) -->
+  <meta property="og:title" content="BigWhaleFitness | Transform Your Fitness">
+  <meta property="og:description" content="Join BigWhaleFitness today — where strength meets results.">
+  <meta property="og:image" content="https://big-whales-fitness.vercel.app/Assets/banner.png">
+  <meta property="og:url" content="https://big-whales-fitness.vercel.app/">
+  <meta property="og:type" content="website">
+  <!-- Twitter Card (optional but nice to include) -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://big-whales-fitness.vercel.app/Assets/banner.png">
+  </head>
+<body class="antialiased text-slate-900 bg-slate-50 font-[Inter]">
 
-</head>
-<body class="antialiased text-slate-900 bg-slate-50 ">
+  <!-- Header / Nav -->
+  <header class="bg-white shadow-sm sticky top-0 z-40 relative">
+    <div  class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex items-center gap-4">
+          <a href="#home" class="flex items-center gap-3">
+            <div class="w-[120px] mt-2 flex items-center justify-center text-white font-bold"><img src="/Assets/Big_whales_finess-removebg-preview.png" alt=""></div>
 
-<!-- Header / Nav -->
-<header class="bg-white shadow-sm sticky top-0 z-40 relative">
-  <div  class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex justify-between items-center h-16">
-      <div class="flex items-center gap-4">
-        <a href="#home" class="flex items-center gap-3">
-          <div class="w-[120px] mt-2 flex items-center justify-center text-white font-bold"><img src="/Assets/Big_whales_finess-removebg-preview.png" alt=""></div>
-          
+          </a>
+        </div>
+      
+        <!-- NAVIGATION -->
+        <nav class="hidden md:flex font-[inter] space-x-6 text-sm font-medium relative" id="nav-menu">
+          <button class="hover:text-blue-400 transition" data-menu="cardio">Cardio Equipment ▾</button>
+          <button class="hover:text-blue-400 transition" data-menu="membership">Membership ▾</button>
+          <button class="hover:text-blue-400 transition" data-menu="programs">Programs ▾</button>
+          <button class="hover:text-blue-400 transition" data-menu="apps">Apps ▾</button>
+          <button class="hover:text-blue-400 transition" data-menu="accessories">Accessories ▾</button>
+          <a href="#trainers" class="hover:text-blue-400 transition">Trainers</a>
+          <a href="#gallery" class="hover:text-blue-400 transition">Gallery</a>
+          <a href="#contact" class="hover:text-blue-400 transition">Contact</a>
+        </nav>
+
+         <!-- CTA Button -->
+        <a href="join now.html" class="hidden md:inline-block bg-blue-600 hover:bg-blue-700 px-5 py-2 rounded-lg font-semibold transition">
+          Join Now
         </a>
+
+        <!-- Mobile Menu Button -->
+        <button id="menu-btn" class="md:hidden text-2xl focus:outline-none z-50 relative">☰</button>
+
       </div>
- 
-      <!-- NAVIGATION -->
-      <nav class="hidden md:flex space-x-6 text-sm font-medium relative" id="nav-menu">
-        <button class="hover:text-blue-400 transition" data-menu="cardio">Cardio Equipment ▾</button>
-        <button class="hover:text-blue-400 transition" data-menu="membership">Membership ▾</button>
-        <button class="hover:text-blue-400 transition" data-menu="programs">Programs ▾</button>
-        <button class="hover:text-blue-400 transition" data-menu="apps">Apps ▾</button>
-        <button class="hover:text-blue-400 transition" data-menu="accessories">Accessories ▾</button>
-        <a href="#trainers" class="hover:text-blue-400 transition">Trainers</a>
-        <a href="#gallery" class="hover:text-blue-400 transition">Gallery</a>
-        <a href="#contact" class="hover:text-blue-400 transition">Contact</a>
-      </nav>
 
-       <!-- CTA Button -->
-      <a href="join now.html" class="hidden md:inline-block bg-blue-600 hover:bg-blue-700 px-5 py-2 rounded-lg font-semibold transition">
-        Join Now
-      </a>
 
-      <!-- Mobile Menu Button -->
-      <button id="menu-btn" class="md:hidden text-2xl focus:outline-none z-50 relative">☰</button>
-
+      <!-- Mobile menu -->
+      <div id="mobileMenu" class="fixed top-0 right-0 h-full w-64 bg-white transform translate-x-full transition-all opacity-0 duration-300 md:hidden shadow-x z-40">
+        <div class="px-4 py-3 flex flex-col gap-2"> 
+          <a href="#classes" class="py-2">Classes</a>
+          <a href="#pricing" class="py-2">Pricing</a>
+          <a href="#trainers" class="py-2">Trainers</a>
+          <a href="#programs" class="py-2">Programs</a>
+          <a href="#contact" class="py-2">Contact</a>
+           <a href="join now.html" class=" md:inline-block bg-blue-600 hover:bg-blue-700 px-5 py-2 rounded-lg font-semibold transition">
+          Join Now
+          </a>
+          <button id="mobileTrial" class="mt-2 bg-sky-600 text-white px-4 py-2 rounded-md">Start Free Trial</button>
+        </div>
+      </div>
     </div>
 
+    <!-- DROPDOWN CONTAINER -->
+    <div id="dropdownContainer" class="absolute mt-3 left-1/2 hidden opacity-0 transform -translate-x-1/2 transition-all duration-300 ease-out bg-gray-100"></div>
+  </header>
 
-    <!-- Mobile menu -->
-    <div id="mobileMenu" class="fixed top-0 right-0 h-full w-64 bg-white transform translate-x-full transition-all opacity-0 duration-300 md:hidden shadow-x z-40">
-      <div class="px-4 py-3 flex flex-col gap-2"> 
-        <a href="#classes" class="py-2">Classes</a>
-        <a href="#pricing" class="py-2">Pricing</a>
-        <a href="#trainers" class="py-2">Trainers</a>
-        <a href="#programs" class="py-2">Programs</a>
-        <a href="#contact" class="py-2">Contact</a>
-         <a href="join now.html" class=" md:inline-block bg-blue-600 hover:bg-blue-700 px-5 py-2 rounded-lg font-semibold transition">
-        Join Now
-        </a>
-        <button id="mobileTrial" class="mt-2 bg-sky-600 text-white px-4 py-2 rounded-md">Start Free Trial</button>
+  <!-- HERO -->
+  <section id="home" class="hero-bg text-white py-24 relative">
+    <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover">
+      <source src="Assets/herosec copy.mp4" type="video/mp4" />
+    </video>
+
+    <div class="absolute inset-0 bg-black/70"></div>
+
+    <div class="max-w-7xl relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
+      <div  class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <div>
+          <h1 class="font-['Bebas_Neue'] text-5xl sm:text-6xl tracking-wide text-white">BigWhale — Build Strength. Gain Confidence.</h1>
+          <p class="font-normal text-slate-200 leading-relaxed">Lagos' premier strength & community gym. Certified coaches. 24/7 access.</p>
+
+          <div class="mt-6 flex gap-3">
+            <button id="ctaTrial" class="bg-white text-slate-900 px-5 py-3 rounded-md font-medium shadow">Start Free Trial</button>
+            <a href="#classes" class="inline-flex items-center px-4 py-3 border rounded-md">View Classes</a>
+          </div>
+
+          <div class="mt-6 flex gap-4 text-sm text-slate-200">
+            <div><strong class="text-white">2,300+</strong> members</div>
+            <div><strong class="text-white">98%</strong> satisfaction</div>
+            <div><strong class="text-white">24/7</strong> access</div>
+          </div>
+        </div>
+
+        <div class="hidden md:block">
+          <div class="rounded-xl overflow-hidden shadow-2xl">
+            <img src="Assets/heroimg.avif" alt="Gym" class="w-full h-80 object-cover" />
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-
-  <!-- DROPDOWN CONTAINER -->
-  <div id="dropdownContainer" class="absolute mt-3 left-1/2 hidden opacity-0 transform -translate-x-1/2 transition-all duration-300 ease-out bg-gray-100"></div>
-</header>
-
-<!-- HERO -->
-<section id="home" class="hero-bg text-white py-24 relative">
-  <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover">
-    <source src="Assets/herosec copy.mp4" type="video/mp4" />
-  </video>
-
-  <div class="absolute inset-0 bg-black/70"></div>
-
-  <div class="max-w-7xl relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
-    <div  class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-      <div>
-        <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight">BigWhale — Build Strength. Gain Confidence.</h1>
-        <p class="mt-4 text-lg max-w-xl">Lagos' premier strength & community gym. Certified coaches. 24/7 access. Programs for every level.</p>
-
+      <div class="hidden md:flex mt-4 flex flex-col absolute">
+        <p class="text-white text-3xl font-bold">The new lineup</p>
+        <p class="text-white text-lg">Explore our premium cardio equipment collection.</p>  
         <div class="mt-6 flex gap-3">
-          <button id="ctaTrial" class="bg-white text-slate-900 px-5 py-3 rounded-md font-medium shadow">Start Free Trial</button>
-          <a href="#classes" class="inline-flex items-center px-4 py-3 border rounded-md">View Classes</a>
+          <div data-aos="fade-right" class="bg-white rounded-lg p-2 transition-transform duration-300 hover:scale-105 backdrop-blur-sm hover:shadow-2xl">
+            <img src="Assets/Card_1_Bike__Desk.webp" class=" object-cover h-48 w-54 rounded-lg bg-gray-200 shadow-md">
+            <p class="text-black text-xl font-bold mt-2 hover:decoration-wavy hover:underline decoration-gray-600">Bike+</p>
+          </div>
+
+          <div data-aos="fade-right" class="bg-white rounded-lg p-2 transition-transform duration-300 hover:scale-105 backdrop-blur-sm hover:shadow-2xl">
+            <img src="Assets/Card_2_Tread__Desk.webp" class=" object-cover h-48 w-54 rounded-lg bg-gray-200 shadow-md">
+            <p class="text-black text-xl font-bold mt-2 hover:decoration-wavy hover:underline decoration-gray-600">Tread+</p>
+          </div>
+
+          <div data-aos="fade-down" class="bg-white rounded-lg p-2 transition-transform duration-300 hover:scale-105 backdrop-blur-sm hover:shadow-2xl">
+            <img src="Assets/Card_3_Row__Desk.webp" class=" object-cover h-48 w-54 rounded-lg bg-gray-200 shadow-md">
+            <p class="text-black text-xl font-bold mt-2 hover:decoration-wavy hover:underline decoration-gray-600">Row+</p>
+          </div>
+
+          <div data-aos="fade-left" class="bg-white rounded-lg p-2 transition-transform duration-300 hover:scale-105 backdrop-blur-sm hover:shadow-2xl">
+            <img src="Assets/Card_4_Bike_Desk.webp" class=" object-cover h-48 w-54 rounded-lg bg-gray-200 shadow-md">
+            <p class="text-black text-xl font-bold mt-2 hover:decoration-wavy hover:underline decoration-gray-600">Bike</p>
+          </div>
+
+          <div data-aos="fade-left" class="bg-white rounded-lg p-2 transition-transform duration-300 hover:scale-105 backdrop-blur-sm hover:shadow-2xl">
+            <img src="Assets/Card_5_Tread_Desk.webp" class=" object-cover h-48 w-54 rounded-lg bg-gray-200 shadow-md">
+            <p class="text-black text-xl font-bold mt-2 hover:decoration-wavy hover:underline decoration-gray-600">Tread</p>
+          </div>
+          <!-- <a href="#treads" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-md font-medium text-white transition">Treadmills</a>
+          <a href="#rows" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-md font-medium text-white transition">Rowing Machines</a>
+          <a href="#bikes" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-md font-medium text-white transition">Exercise Bikes</a> -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Benefits -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative md:mt-54"> 
+    <div data-aos="flip-up" class="grid grid-cols-1 md:grid-cols-3 gap-6 ">
+      <div class="bg-white p-6 rounded-lg shadow-sm">
+        <h3 class="font-semibold">Certified Coaches</h3>
+        <p class="mt-2 text-sm text-slate-600">Personalised plans from highly qualified trainers.</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-sm">
+        <h3 class="font-semibold">Top-tier Equipment</h3>
+        <p class="mt-2 text-sm text-slate-600">Olympic platforms, cardio zone & recovery studio.</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-sm">
+        <h3 class="font-semibold">Flexible Memberships</h3>
+        <p class="mt-2 text-sm text-slate-600">Monthly, annual, and student plans with easy cancellations.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section id="pricing" class="bg-gradient-to-b from-slate-50 to-white py-12">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-8">
+        <h2 class="text-2xl font-bold">Membership Plans</h2>
+        <p class="text-sm text-slate-600 mt-2">Choose the right plan — switch anytime.</p>
+      </div>
+
+      <div data-aos="zoom-in-right" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Basic -->
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h4 class="font-semibold">Basic</h4>
+          <div class="mt-4 text-3xl font-bold">₦10,000 <span class="text-sm font-medium">/mo</span></div>
+          <ul class="mt-4 text-sm text-slate-600 space-y-2">
+            <li>Gym access (weekday hours)</li>
+            <li>1 class / week</li>
+            <li>No personal training</li>
+          </ul>
+          <button class="mt-6 w-full bg-slate-900 text-white py-2 rounded" onclick="joinPlan('Basic')">Join Now</button>
         </div>
 
-        <div class="mt-6 flex gap-4 text-sm text-slate-200">
-          <div><strong class="text-white">2,300+</strong> members</div>
-          <div><strong class="text-white">98%</strong> satisfaction</div>
-          <div><strong class="text-white">24/7</strong> access</div>
+        <!-- Pro -->
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h4 class="font-semibold">Pro</h4>
+          <div class="mt-4 text-3xl font-bold">₦18,000 <span class="text-sm font-medium">/mo</span></div>
+          <ul class="mt-4 text-sm text-slate-600 space-y-2">
+            <li>24/7 gym access</li>
+            <li>3 classes / week</li>
+            <li>1 PT session / month</li>
+          </ul>
+          <button class="mt-6 w-full bg-sky-600 text-white py-2 rounded" onclick="joinPlan('Pro')">Start Free Trial</button>
+        </div>
+
+        <!-- VIP -->
+        <div class="bg-white p-6 rounded-lg shadow border-2 border-sky-600">
+          <h4 class="font-semibold">VIP</h4>
+          <div class="mt-4 text-3xl font-bold">₦40,000 <span class="text-sm font-medium">/mo</span></div>
+          <ul class="mt-4 text-sm text-slate-600 space-y-2">
+            <li>All access + classes unlimited</li>
+            <li>4 PT sessions / month</li>
+            <li>Sauna & locker access</li>
+          </ul>
+          <button class="mt-6 w-full bg-indigo-700 text-white py-2 rounded" onclick="joinPlan('VIP')">Book Tour</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Classes & Schedule -->
+  <section id="classes" class="py-12">
+    <div data-aos="zoom-in-left" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center mb-6">
+        <div>
+          <h2 class="text-2xl font-bold">Classes & Schedule</h2>
+          <p class="text-sm text-slate-600">Filter by type or trainer and book your spot.</p>
+        </div>
+        <div class="flex gap-2 items-center">
+          <select id="classFilter" class="border rounded px-3 py-2 text-sm">
+            <option value="all">All classes</option>
+            <option value="strength">Strength</option>
+            <option value="hiit">HIIT</option>
+            <option value="yoga">Yoga</option>
+          </select>
         </div>
       </div>
 
-      <div class="hidden md:block">
-        <div class="rounded-xl overflow-hidden shadow-2xl">
-          <img src="Assets/heroimg.avif" alt="Gym" class="w-full h-80 object-cover" />
+      <div id="schedule" class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <!-- sample class cards -->
+        <article class="bg-white p-4 rounded shadow" data-type="strength">
+          <h3 class="font-semibold">Barbell Basics</h3>
+          <p class="text-sm text-slate-600">Mon, Wed, Fri — 7:00 AM (60 mins)</p>
+          <p class="mt-2 text-sm">Learn proper technique for squat, deadlift & press.</p>
+          <div class="mt-3 flex gap-2">
+            <button class="px-3 py-1 border rounded text-sm" onclick="addToCalendar('Barbell Basics')">Add to calendar</button>
+            <button class="ml-auto bg-sky-600 text-white px-3 py-1 rounded text-sm" onclick="openBooking('Barbell Basics')">Book</button>
+          </div>
+        </article>
+
+        <article class="bg-white p-4 rounded shadow" data-type="hiit">
+          <h3 class="font-semibold">HIIT Blast</h3>
+          <p class="text-sm text-slate-600">Tue, Thu — 6:00 PM (45 mins)</p>
+          <p class="mt-2 text-sm">Circuit-based conditioning to improve power & stamina.</p>
+          <div class="mt-3 flex gap-2">
+            <button class="px-3 py-1 border rounded text-sm" onclick="addToCalendar('HIIT Blast')">Add to calendar</button>
+            <button class="ml-auto bg-sky-600 text-white px-3 py-1 rounded text-sm" onclick="openBooking('HIIT Blast')">Book</button>
+          </div>
+        </article>
+
+        <article class="bg-white p-4 rounded shadow" data-type="yoga">
+          <h3 class="font-semibold">Recovery Yoga</h3>
+          <p class="text-sm text-slate-600">Sat — 10:00 AM (60 mins)</p>
+          <p class="mt-2 text-sm">Mobility, breathing, and active recovery work.</p>
+          <div class="mt-3 flex gap-2">
+            <button class="px-3 py-1 border rounded text-sm" onclick="addToCalendar('Recovery Yoga')">Add to calendar</button>
+            <button class="ml-auto bg-sky-600 text-white px-3 py-1 rounded text-sm" onclick="openBooking('Recovery Yoga')">Book</button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trainers -->
+  <section id="trainers" class="py-12 bg-slate-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div data-aos="zoom-in" class="text-center mb-8">
+        <h2 class="text-2xl font-bold">Our Trainers</h2>
+        <p class="text-sm text-slate-600">Certified professionals helping members reach their goals.</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+        <!-- trainer card -->
+        <div data-aos="zoom-in-left" class="bg-white rounded-lg p-4 shadow">
+          <img src="Assets/trainer1.webp" alt="Trainer" class="w-full h-60 object-cover rounded">
+          <h4 class="mt-3 font-semibold">Ava Martinez</h4>
+          <p class="text-sm text-slate-600">Strength coach • MSc Sports Science</p>
+          <p class="mt-2 text-sm">Specialties: powerlifting, hypertrophy, female strength.</p>
+          <div class="mt-3 flex gap-2">
+            <button class="flex-1 border rounded px-3 py-1 text-sm" onclick="viewProfile('Ava')">Profile</button>
+            <button class="bg-sky-600 text-white px-3 py-1 rounded text-sm" onclick="bookTrainer('Ava')">Book 1:1</button>
+          </div>
+        </div>
+
+        <div data-aos="zoom-in" class="bg-white rounded-lg p-4 shadow">
+          <img src="Assets/trainer2.webp" alt="Trainer" class="w-full h-60 object-cover rounded">
+          <h4 class="mt-3 font-semibold">Jake Thompson</h4>
+          <p class="text-sm text-slate-600">Conditioning coach • BSc PE</p>
+          <p class="mt-2 text-sm">Specialties: HIIT, endurance, group classes.</p>
+          <div class="mt-3 flex gap-2">
+            <button class="flex-1 border rounded px-3 py-1 text-sm" onclick="viewProfile('Jake')">Profile</button>
+            <button class="bg-sky-600 text-white px-3 py-1 rounded text-sm" onclick="bookTrainer('Jake')">Book 1:1</button>
+          </div>
+        </div>
+
+        <div data-aos="zoom-in" class="bg-white rounded-lg p-4 shadow">
+          <img src="Assets/trainer3.webp" alt="Trainer" class="w-full h-60 object-cover rounded">
+          <h4 class="mt-3 font-semibold">Coach Blaze</h4>
+          <p class="text-sm text-slate-600">Mobility & rehab specialist</p>
+          <p class="mt-2 text-sm">Specialties: rehab, mobility, injury prevention.</p>
+          <div class="mt-3 flex gap-2">
+            <button class="flex-1 border rounded px-3 py-1 text-sm" onclick="viewProfile('Coach')">Profile</button>
+            <button class="bg-sky-600 text-white px-3 py-1 rounded text-sm" onclick="bookTrainer('Coach')">Book 1:1</button>
+          </div>
+        </div>
+
+        <div data-aos="zoom-in-right" class="bg-white rounded-lg p-4 shadow">
+          <img src="Assets/trainer4.webp" alt="Trainer" class="w-full h-60 object-cover rounded">
+          <h4 class="mt-3 font-semibold">Ethan Brooks</h4>
+          <p class="text-sm text-slate-600">Mobility & rehab specialist</p>
+          <p class="mt-2 text-sm">Specialties: rehab, mobility, injury prevention.</p>
+          <div class="mt-3 flex gap-2">
+            <button class="flex-1 border rounded px-3 py-1 text-sm" onclick="viewProfile('Ethan')">Profile</button>
+            <button class="bg-sky-600 text-white px-3 py-1 rounded text-sm" onclick="bookTrainer('Ethan')">Book 1:1</button>
+          </div>
         </div>
       </div>
     </div>
-    <div class="hidden md:flex mt-4 flex flex-col absolute">
-      <p class="text-white text-3xl font-bold">The new lineup</p>
-      <p class="text-white text-lg">Explore our premium cardio equipment collection.</p>  
-      <div class="mt-6 flex gap-3">
-        <div data-aos="fade-right" class="bg-white rounded-lg p-2 transition-transform duration-300 hover:scale-105 backdrop-blur-sm hover:shadow-2xl">
-          <img src="Assets/Card_1_Bike__Desk.webp" class=" object-cover h-48 w-54 rounded-lg bg-gray-200 shadow-md">
-          <p class="text-black text-xl font-bold mt-2 hover:decoration-wavy hover:underline decoration-gray-600">Bike+</p>
-        </div>
+  </section>
 
-        <div data-aos="fade-right" class="bg-white rounded-lg p-2 transition-transform duration-300 hover:scale-105 backdrop-blur-sm hover:shadow-2xl">
-          <img src="Assets/Card_2_Tread__Desk.webp" class=" object-cover h-48 w-54 rounded-lg bg-gray-200 shadow-md">
-          <p class="text-black text-xl font-bold mt-2 hover:decoration-wavy hover:underline decoration-gray-600">Tread+</p>
-        </div>
+  <!-- Gallery / Facilities -->
+  <section id="gallery" class="py-12 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 data-aos="zoom-in" class="text-2xl font-bold mb-6 text-gray-800">Facilities & Gallery</h2>
 
-        <div data-aos="fade-down" class="bg-white rounded-lg p-2 transition-transform duration-300 hover:scale-105 backdrop-blur-sm hover:shadow-2xl">
-          <img src="Assets/Card_3_Row__Desk.webp" class=" object-cover h-48 w-54 rounded-lg bg-gray-200 shadow-md">
-          <p class="text-black text-xl font-bold mt-2 hover:decoration-wavy hover:underline decoration-gray-600">Row+</p>
-        </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <a href="Gallery.html" data-aos="zoom-in-left" class="group relative overflow-hidden rounded-lg">
+          <img src="Assets/gymfloor1.avif"
+               alt="Gym Floor" class="w-full h-40 object-cover group-hover:scale-110 transition duration-500">
+          <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+            <span class="text-white font-semibold">See More</span>
+          </div>
+        </a>
 
-        <div data-aos="fade-left" class="bg-white rounded-lg p-2 transition-transform duration-300 hover:scale-105 backdrop-blur-sm hover:shadow-2xl">
-          <img src="Assets/Card_4_Bike_Desk.webp" class=" object-cover h-48 w-54 rounded-lg bg-gray-200 shadow-md">
-          <p class="text-black text-xl font-bold mt-2 hover:decoration-wavy hover:underline decoration-gray-600">Bike</p>
-        </div>
+        <a href="Gallery.html"  data-aos="zoom-in" class="group relative overflow-hidden rounded-lg">
+          <img src="Assets/cardio.webp"
+               alt="Cardio Zone" class="w-full h-40 object-cover group-hover:scale-110 transition duration-500">
+          <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+            <span class="text-white font-semibold">See More</span>
+          </div>
+        </a>
 
-        <div data-aos="fade-left" class="bg-white rounded-lg p-2 transition-transform duration-300 hover:scale-105 backdrop-blur-sm hover:shadow-2xl">
-          <img src="Assets/Card_5_Tread_Desk.webp" class=" object-cover h-48 w-54 rounded-lg bg-gray-200 shadow-md">
-          <p class="text-black text-xl font-bold mt-2 hover:decoration-wavy hover:underline decoration-gray-600">Tread</p>
-        </div>
-        <!-- <a href="#treads" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-md font-medium text-white transition">Treadmills</a>
-        <a href="#rows" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-md font-medium text-white transition">Rowing Machines</a>
-        <a href="#bikes" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-md font-medium text-white transition">Exercise Bikes</a> -->
-    </div>
-  </div>
-</section>
+        <a href="Gallery.html" data-aos="zoom-in" class="group relative overflow-hidden rounded-lg">
+          <img src="Assets/weightroom.webp"
+               alt="Weight Room" class="w-full h-40 object-cover group-hover:scale-110 transition duration-500">
+          <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+            <span class="text-white font-semibold">See More</span>
+          </div>
+        </a>
 
-<!-- Quick Benefits -->
-<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative md:mt-54"> 
-  <div data-aos="flip-up" class="grid grid-cols-1 md:grid-cols-3 gap-6 ">
-    <div class="bg-white p-6 rounded-lg shadow-sm">
-      <h3 class="font-semibold">Certified Coaches</h3>
-      <p class="mt-2 text-sm text-slate-600">Personalised plans from highly qualified trainers.</p>
-    </div>
-    <div class="bg-white p-6 rounded-lg shadow-sm">
-      <h3 class="font-semibold">Top-tier Equipment</h3>
-      <p class="mt-2 text-sm text-slate-600">Olympic platforms, cardio zone & recovery studio.</p>
-    </div>
-    <div class="bg-white p-6 rounded-lg shadow-sm">
-      <h3 class="font-semibold">Flexible Memberships</h3>
-      <p class="mt-2 text-sm text-slate-600">Monthly, annual, and student plans with easy cancellations.</p>
-    </div>
-  </div>
-</section>
-
-<!-- Pricing -->
-<section id="pricing" class="bg-gradient-to-b from-slate-50 to-white py-12">
-  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-8">
-      <h2 class="text-2xl font-bold">Membership Plans</h2>
-      <p class="text-sm text-slate-600 mt-2">Choose the right plan — switch anytime.</p>
-    </div>
-
-    <div data-aos="zoom-in-right" class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <!-- Basic -->
-      <div class="bg-white p-6 rounded-lg shadow">
-        <h4 class="font-semibold">Basic</h4>
-        <div class="mt-4 text-3xl font-bold">₦10,000 <span class="text-sm font-medium">/mo</span></div>
-        <ul class="mt-4 text-sm text-slate-600 space-y-2">
-          <li>Gym access (weekday hours)</li>
-          <li>1 class / week</li>
-          <li>No personal training</li>
-        </ul>
-        <button class="mt-6 w-full bg-slate-900 text-white py-2 rounded" onclick="joinPlan('Basic')">Join Now</button>
-      </div>
-
-      <!-- Pro -->
-      <div class="bg-white p-6 rounded-lg shadow">
-        <h4 class="font-semibold">Pro</h4>
-        <div class="mt-4 text-3xl font-bold">₦18,000 <span class="text-sm font-medium">/mo</span></div>
-        <ul class="mt-4 text-sm text-slate-600 space-y-2">
-          <li>24/7 gym access</li>
-          <li>3 classes / week</li>
-          <li>1 PT session / month</li>
-        </ul>
-        <button class="mt-6 w-full bg-sky-600 text-white py-2 rounded" onclick="joinPlan('Pro')">Start Free Trial</button>
-      </div>
-
-      <!-- VIP -->
-      <div class="bg-white p-6 rounded-lg shadow border-2 border-sky-600">
-        <h4 class="font-semibold">VIP</h4>
-        <div class="mt-4 text-3xl font-bold">₦40,000 <span class="text-sm font-medium">/mo</span></div>
-        <ul class="mt-4 text-sm text-slate-600 space-y-2">
-          <li>All access + classes unlimited</li>
-          <li>4 PT sessions / month</li>
-          <li>Sauna & locker access</li>
-        </ul>
-        <button class="mt-6 w-full bg-indigo-700 text-white py-2 rounded" onclick="joinPlan('VIP')">Book Tour</button>
+        <a href="gallery-studio.html" data-aos="zoom-in-right" class="group relative overflow-hidden rounded-lg">
+          <img src="Assets/studio.avif"
+               alt="Studio Classes" class="w-full h-40 object-cover group-hover:scale-110 transition duration-500">
+          <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+            <span class="text-white font-semibold">See More</span>
+          </div>
+        </a>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Classes & Schedule -->
-<section id="classes" class="py-12">
-  <div data-aos="zoom-in-left" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex justify-between items-center mb-6">
+  <!-- Programs -->
+  <section id="programs" class="py-12 bg-slate-50">
+    <div data-aos="fade-up" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-bold mb-4">Programs</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-white p-4 rounded shadow">
+          <h3 class="font-semibold">Beginner Strength</h3>
+          <p class="mt-2 text-sm text-slate-600">8-week program — focus on fundamentals and consistency.</p>
+          <button class="mt-3 text-sm border rounded px-3 py-1" onclick="learnMore('Beginner Strength')">Learn more</button>
+        </div>
+
+        <div class="bg-white p-4 rounded shadow">
+          <h3 class="font-semibold">Athlete Performance</h3>
+          <p class="mt-2 text-sm text-slate-600">Custom program for athletes: power, speed, agility.</p>
+          <button class="mt-3 text-sm border rounded px-3 py-1" onclick="learnMore('Athlete Performance')">Learn more</button>
+        </div>
+
+        <div class="bg-white p-4 rounded shadow">
+          <h3 class="font-semibold">Rehab & Mobility</h3>
+          <p class="mt-2 text-sm text-slate-600">Mobility-first approach to pain-free training.</p>
+          <button class="mt-3 text-sm border rounded px-3 py-1" onclick="learnMore('Rehab & Mobility')">Learn more</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="py-12">
+    <div data-aos="fade-up" class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-2xl font-bold mb-4">Success Stories</h2>
+      <div class="carousel-track flex gap-4 overflow-x-auto py-4">
+        <blockquote class="min-w-[80%] md:min-w-[40%] bg-white p-6 rounded shadow">
+          <p class="italic">"I gained 15kg of strength in 6 months. The coaches at BigWhale know their stuff."</p>
+          <footer class="mt-4 font-semibold">— Peterson, Member</footer>
+        </blockquote>
+
+        <blockquote class="min-w-[80%] md:min-w-[40%] bg-white p-6 rounded shadow">
+          <p class="italic">"Supportive community and solid programming. Can't recommend enough."</p>
+          <footer class="mt-4 font-semibold">— Willy, Member</footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog teaser -->
+  <section id="blog" class="py-12 bg-slate-50">
+    <div data-aos="fade-up" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-bold mb-4">From the Blog</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <article class="bg-white p-4 rounded shadow">
+          <h3 class="font-semibold">How to pick the right gym shoes</h3>
+          <p class="mt-2 text-sm text-slate-600">Short excerpt with a CTA to read more.</p>
+        </article>
+        <article class="bg-white p-4 rounded shadow">
+          <h3 class="font-semibold">Nutrition for strength gains</h3>
+          <p class="mt-2 text-sm text-slate-600">Short excerpt with a CTA to read more.</p>
+        </article>
+        <article class="bg-white p-4 rounded shadow">
+          <h3 class="font-semibold">Preparing for your first competition</h3>
+          <p class="mt-2 text-sm text-slate-600">Short excerpt with a CTA to read more.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-12">
+    <div data-aos="fade-up" class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-bold mb-4">Contact & Locations</h2>
+      <div class="bg-white p-6 rounded shadow grid grid-cols-1 md:grid-cols-2 gap-4">
+        <form id="contactForm" class="space-y-4">
+          <div>
+            <label class="text-sm">Name</label>
+            <input name="name" type="text" required class="w-full border rounded px-3 py-2 mt-1" />
+          </div>
+          <div>
+            <label class="text-sm">Email</label>
+            <input name="email" type="email" required class="w-full border rounded px-3 py-2 mt-1" />
+          </div>
+          <div>
+            <label class="text-sm">Message</label>
+            <textarea name="message" rows="4" required class="w-full border rounded px-3 py-2 mt-1"></textarea>
+          </div>
+          <button type="submit" class="bg-sky-600 text-white px-4 py-2 rounded">Send Message</button>
+        </form>
+      
+        <div data-aos="zoom-in">
+          <h4 class="font-semibold">BigWhale Lagos</h4>
+          <p class="text-sm text-slate-600">123 Harbour Road, Lagos</p>
+          <p class="text-sm text-slate-600">Mon — Sun: 5:00 AM — 11:00 PM</p>
+          <p class="mt-2 text-sm">Phone: +234 800 000 0000</p>
+          <div class="mt-4">
+            <iframe class="w-full h-48 rounded" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126743.123456789!2d3.342!3d6.524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNkM2wJAgTWFw!5e0!3m2!1sen!2sng!4v0000000000000" aria-hidden="false"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-slate-900 text-slate-200 py-8 mt-8">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-6">
       <div>
-        <h2 class="text-2xl font-bold">Classes & Schedule</h2>
-        <p class="text-sm text-slate-600">Filter by type or trainer and book your spot.</p>
+        <h5 class="font-semibold text-gray-300">BigWhalesFitness</h5>
+        <p class="text-sm mt-2">Strength, community & results. © <span id="year"></span> BigWhale</p>
+        <p class="text-md font-mono font-medium text-white ">Designed by <i>MENYOMnl</i></p>
       </div>
-      <div class="flex gap-2 items-center">
-        <select id="classFilter" class="border rounded px-3 py-2 text-sm">
-          <option value="all">All classes</option>
-          <option value="strength">Strength</option>
-          <option value="hiit">HIIT</option>
-          <option value="yoga">Yoga</option>
-        </select>
+      <div>
+        <h6 class="font-semibold">Links</h6>
+        <ul class="mt-2 text-sm space-y-1">
+          <li><a class="hover:decoration-wavy hover:underline decoration-gray-600" href="#pricing">Pricing</a></li>
+          <li><a class="hover:decoration-wavy hover:underline decoration-gray-600" href="#classes">Classes</a></li>
+          <li><a class="hover:decoration-wavy hover:underline decoration-gray-600" href="#contact">Contact</a></li>
+        </ul>
       </div>
-    </div>
-
-    <div id="schedule" class="grid grid-cols-1 md:grid-cols-3 gap-4">
-      <!-- sample class cards -->
-      <article class="bg-white p-4 rounded shadow" data-type="strength">
-        <h3 class="font-semibold">Barbell Basics</h3>
-        <p class="text-sm text-slate-600">Mon, Wed, Fri — 7:00 AM (60 mins)</p>
-        <p class="mt-2 text-sm">Learn proper technique for squat, deadlift & press.</p>
-        <div class="mt-3 flex gap-2">
-          <button class="px-3 py-1 border rounded text-sm" onclick="addToCalendar('Barbell Basics')">Add to calendar</button>
-          <button class="ml-auto bg-sky-600 text-white px-3 py-1 rounded text-sm" onclick="openBooking('Barbell Basics')">Book</button>
-        </div>
-      </article>
-
-      <article class="bg-white p-4 rounded shadow" data-type="hiit">
-        <h3 class="font-semibold">HIIT Blast</h3>
-        <p class="text-sm text-slate-600">Tue, Thu — 6:00 PM (45 mins)</p>
-        <p class="mt-2 text-sm">Circuit-based conditioning to improve power & stamina.</p>
-        <div class="mt-3 flex gap-2">
-          <button class="px-3 py-1 border rounded text-sm" onclick="addToCalendar('HIIT Blast')">Add to calendar</button>
-          <button class="ml-auto bg-sky-600 text-white px-3 py-1 rounded text-sm" onclick="openBooking('HIIT Blast')">Book</button>
-        </div>
-      </article>
-
-      <article class="bg-white p-4 rounded shadow" data-type="yoga">
-        <h3 class="font-semibold">Recovery Yoga</h3>
-        <p class="text-sm text-slate-600">Sat — 10:00 AM (60 mins)</p>
-        <p class="mt-2 text-sm">Mobility, breathing, and active recovery work.</p>
-        <div class="mt-3 flex gap-2">
-          <button class="px-3 py-1 border rounded text-sm" onclick="addToCalendar('Recovery Yoga')">Add to calendar</button>
-          <button class="ml-auto bg-sky-600 text-white px-3 py-1 rounded text-sm" onclick="openBooking('Recovery Yoga')">Book</button>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- Trainers -->
-<section id="trainers" class="py-12 bg-slate-50">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div data-aos="zoom-in" class="text-center mb-8">
-      <h2 class="text-2xl font-bold">Our Trainers</h2>
-      <p class="text-sm text-slate-600">Certified professionals helping members reach their goals.</p>
-    </div>
-
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-      <!-- trainer card -->
-      <div data-aos="zoom-in-left" class="bg-white rounded-lg p-4 shadow">
-        <img src="Assets/trainer1.webp" alt="Trainer" class="w-full h-60 object-cover rounded">
-        <h4 class="mt-3 font-semibold">Ava Martinez</h4>
-        <p class="text-sm text-slate-600">Strength coach • MSc Sports Science</p>
-        <p class="mt-2 text-sm">Specialties: powerlifting, hypertrophy, female strength.</p>
-        <div class="mt-3 flex gap-2">
-          <button class="flex-1 border rounded px-3 py-1 text-sm" onclick="viewProfile('Ava')">Profile</button>
-          <button class="bg-sky-600 text-white px-3 py-1 rounded text-sm" onclick="bookTrainer('Ava')">Book 1:1</button>
-        </div>
-      </div>
-
-      <div data-aos="zoom-in" class="bg-white rounded-lg p-4 shadow">
-        <img src="Assets/trainer2.webp" alt="Trainer" class="w-full h-60 object-cover rounded">
-        <h4 class="mt-3 font-semibold">Jake Thompson</h4>
-        <p class="text-sm text-slate-600">Conditioning coach • BSc PE</p>
-        <p class="mt-2 text-sm">Specialties: HIIT, endurance, group classes.</p>
-        <div class="mt-3 flex gap-2">
-          <button class="flex-1 border rounded px-3 py-1 text-sm" onclick="viewProfile('Jake')">Profile</button>
-          <button class="bg-sky-600 text-white px-3 py-1 rounded text-sm" onclick="bookTrainer('Jake')">Book 1:1</button>
-        </div>
-      </div>
-
-      <div data-aos="zoom-in" class="bg-white rounded-lg p-4 shadow">
-        <img src="Assets/trainer3.webp" alt="Trainer" class="w-full h-60 object-cover rounded">
-        <h4 class="mt-3 font-semibold">Coach Blaze</h4>
-        <p class="text-sm text-slate-600">Mobility & rehab specialist</p>
-        <p class="mt-2 text-sm">Specialties: rehab, mobility, injury prevention.</p>
-        <div class="mt-3 flex gap-2">
-          <button class="flex-1 border rounded px-3 py-1 text-sm" onclick="viewProfile('Coach')">Profile</button>
-          <button class="bg-sky-600 text-white px-3 py-1 rounded text-sm" onclick="bookTrainer('Coach')">Book 1:1</button>
-        </div>
-      </div>
-
-      <div data-aos="zoom-in-right" class="bg-white rounded-lg p-4 shadow">
-        <img src="Assets/trainer4.webp" alt="Trainer" class="w-full h-60 object-cover rounded">
-        <h4 class="mt-3 font-semibold">Ethan Brooks</h4>
-        <p class="text-sm text-slate-600">Mobility & rehab specialist</p>
-        <p class="mt-2 text-sm">Specialties: rehab, mobility, injury prevention.</p>
-        <div class="mt-3 flex gap-2">
-          <button class="flex-1 border rounded px-3 py-1 text-sm" onclick="viewProfile('Ethan')">Profile</button>
-          <button class="bg-sky-600 text-white px-3 py-1 rounded text-sm" onclick="bookTrainer('Ethan')">Book 1:1</button>
-        </div>
+      <div>
+        <h6 class="font-semibold">Newsletter</h6>
+        <p class="text-sm mt-2">Sign up for offers and updates.</p>
+        <form id="newsletterForm" class="mt-3 flex gap-2">
+          <input name="email" type="email" required placeholder="you@email.com" class="px-3 py-2 rounded-l border w-full" />
+          <button class="bg-sky-600 px-4 py-2 rounded-r text-white">Subscribe</button>
+        </form>
       </div>
     </div>
-  </div>
-</section>
+  </footer>
 
-<!-- Gallery / Facilities -->
-<section id="gallery" class="py-12 bg-gray-50">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-    <h2 data-aos="zoom-in" class="text-2xl font-bold mb-6 text-gray-800">Facilities & Gallery</h2>
 
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-      <a href="Gallery.html" data-aos="zoom-in-left" class="group relative overflow-hidden rounded-lg">
-        <img src="Assets/gymfloor1.avif"
-             alt="Gym Floor" class="w-full h-40 object-cover group-hover:scale-110 transition duration-500">
-        <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
-          <span class="text-white font-semibold">See More</span>
+  <!-- Booking Modal (simple) -->
+  <div id="bookingModal" data-aos="fade-up" class="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center hidden z-50">
+    <div class="bg-white rounded-lg w-full max-w-md p-6">
+      <h3 class="text-lg font-semibold mb-2">Book Class</h3>
+      <p id="bookingTitle" class="text-sm text-slate-600 mb-4"></p>
+    
+      <form id="bookingForm" class="space-y-3">
+        <input type="text" name="name" placeholder="Your name" required class="w-full border rounded px-3 py-2" />
+        <input type="email" name="email" placeholder="Email" required class="w-full border rounded px-3 py-2" />
+        <div class="flex gap-2">
+          <button type="submit" class="bg-sky-600 text-white px-4 py-2 rounded">Confirm Booking</button>
+          <button type="button" class="border px-4 py-2 rounded" onclick="closeBooking()">Cancel</button>
         </div>
-      </a>
-
-      <a href="Gallery.html"  data-aos="zoom-in" class="group relative overflow-hidden rounded-lg">
-        <img src="Assets/cardio.webp"
-             alt="Cardio Zone" class="w-full h-40 object-cover group-hover:scale-110 transition duration-500">
-        <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
-          <span class="text-white font-semibold">See More</span>
-        </div>
-      </a>
-
-      <a href="Gallery.html" data-aos="zoom-in" class="group relative overflow-hidden rounded-lg">
-        <img src="Assets/weightroom.webp"
-             alt="Weight Room" class="w-full h-40 object-cover group-hover:scale-110 transition duration-500">
-        <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
-          <span class="text-white font-semibold">See More</span>
-        </div>
-      </a>
-
-      <a href="gallery-studio.html" data-aos="zoom-in-right" class="group relative overflow-hidden rounded-lg">
-        <img src="Assets/studio.avif"
-             alt="Studio Classes" class="w-full h-40 object-cover group-hover:scale-110 transition duration-500">
-        <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
-          <span class="text-white font-semibold">See More</span>
-        </div>
-      </a>
-    </div>
-  </div>
-</section>
-
-
-<!-- Programs -->
-<section id="programs" class="py-12 bg-slate-50">
-  <div data-aos="fade-up" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-    <h2 class="text-2xl font-bold mb-4">Programs</h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div class="bg-white p-4 rounded shadow">
-        <h3 class="font-semibold">Beginner Strength</h3>
-        <p class="mt-2 text-sm text-slate-600">8-week program — focus on fundamentals and consistency.</p>
-        <button class="mt-3 text-sm border rounded px-3 py-1" onclick="learnMore('Beginner Strength')">Learn more</button>
-      </div>
-
-      <div class="bg-white p-4 rounded shadow">
-        <h3 class="font-semibold">Athlete Performance</h3>
-        <p class="mt-2 text-sm text-slate-600">Custom program for athletes: power, speed, agility.</p>
-        <button class="mt-3 text-sm border rounded px-3 py-1" onclick="learnMore('Athlete Performance')">Learn more</button>
-      </div>
-
-      <div class="bg-white p-4 rounded shadow">
-        <h3 class="font-semibold">Rehab & Mobility</h3>
-        <p class="mt-2 text-sm text-slate-600">Mobility-first approach to pain-free training.</p>
-        <button class="mt-3 text-sm border rounded px-3 py-1" onclick="learnMore('Rehab & Mobility')">Learn more</button>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Testimonials -->
-<section id="testimonials" class="py-12">
-  <div data-aos="fade-up" class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-    <h2 class="text-2xl font-bold mb-4">Success Stories</h2>
-    <div class="carousel-track flex gap-4 overflow-x-auto py-4">
-      <blockquote class="min-w-[80%] md:min-w-[40%] bg-white p-6 rounded shadow">
-        <p class="italic">"I gained 15kg of strength in 6 months. The coaches at BigWhale know their stuff."</p>
-        <footer class="mt-4 font-semibold">— Peterson, Member</footer>
-      </blockquote>
-
-      <blockquote class="min-w-[80%] md:min-w-[40%] bg-white p-6 rounded shadow">
-        <p class="italic">"Supportive community and solid programming. Can't recommend enough."</p>
-        <footer class="mt-4 font-semibold">— Willy, Member</footer>
-      </blockquote>
-    </div>
-  </div>
-</section>
-
-<!-- Blog teaser -->
-<section id="blog" class="py-12 bg-slate-50">
-  <div data-aos="fade-up" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-    <h2 class="text-2xl font-bold mb-4">From the Blog</h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <article class="bg-white p-4 rounded shadow">
-        <h3 class="font-semibold">How to pick the right gym shoes</h3>
-        <p class="mt-2 text-sm text-slate-600">Short excerpt with a CTA to read more.</p>
-      </article>
-      <article class="bg-white p-4 rounded shadow">
-        <h3 class="font-semibold">Nutrition for strength gains</h3>
-        <p class="mt-2 text-sm text-slate-600">Short excerpt with a CTA to read more.</p>
-      </article>
-      <article class="bg-white p-4 rounded shadow">
-        <h3 class="font-semibold">Preparing for your first competition</h3>
-        <p class="mt-2 text-sm text-slate-600">Short excerpt with a CTA to read more.</p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- Contact -->
-<section id="contact" class="py-12">
-  <div data-aos="fade-up" class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-    <h2 class="text-2xl font-bold mb-4">Contact & Locations</h2>
-    <div class="bg-white p-6 rounded shadow grid grid-cols-1 md:grid-cols-2 gap-4">
-      <form id="contactForm" class="space-y-4">
-        <div>
-          <label class="text-sm">Name</label>
-          <input name="name" type="text" required class="w-full border rounded px-3 py-2 mt-1" />
-        </div>
-        <div>
-          <label class="text-sm">Email</label>
-          <input name="email" type="email" required class="w-full border rounded px-3 py-2 mt-1" />
-        </div>
-        <div>
-          <label class="text-sm">Message</label>
-          <textarea name="message" rows="4" required class="w-full border rounded px-3 py-2 mt-1"></textarea>
-        </div>
-        <button type="submit" class="bg-sky-600 text-white px-4 py-2 rounded">Send Message</button>
-      </form>
-
-      <div data-aos="zoom-in">
-        <h4 class="font-semibold">BigWhale Lagos</h4>
-        <p class="text-sm text-slate-600">123 Harbour Road, Lagos</p>
-        <p class="text-sm text-slate-600">Mon — Sun: 5:00 AM — 11:00 PM</p>
-        <p class="mt-2 text-sm">Phone: +234 800 000 0000</p>
-        <div class="mt-4">
-          <iframe class="w-full h-48 rounded" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126743.123456789!2d3.342!3d6.524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNkM2wJAgTWFw!5e0!3m2!1sen!2sng!4v0000000000000" aria-hidden="false"></iframe>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Footer -->
-<footer class="bg-slate-900 text-slate-200 py-8 mt-8">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-6">
-    <div>
-      <h5 class="font-semibold text-gray-300">BigWhalesFitness</h5>
-      <p class="text-sm mt-2">Strength, community & results. © <span id="year"></span> BigWhale</p>
-      <p class="text-md font-mono font-medium text-white ">Designed by <i>MENYOMnl</i></p>
-    </div>
-    <div>
-      <h6 class="font-semibold">Links</h6>
-      <ul class="mt-2 text-sm space-y-1">
-        <li><a class="hover:decoration-wavy hover:underline decoration-gray-600" href="#pricing">Pricing</a></li>
-        <li><a class="hover:decoration-wavy hover:underline decoration-gray-600" href="#classes">Classes</a></li>
-        <li><a class="hover:decoration-wavy hover:underline decoration-gray-600" href="#contact">Contact</a></li>
-      </ul>
-    </div>
-    <div>
-      <h6 class="font-semibold">Newsletter</h6>
-      <p class="text-sm mt-2">Sign up for offers and updates.</p>
-      <form id="newsletterForm" class="mt-3 flex gap-2">
-        <input name="email" type="email" required placeholder="you@email.com" class="px-3 py-2 rounded-l border w-full" />
-        <button class="bg-sky-600 px-4 py-2 rounded-r text-white">Subscribe</button>
       </form>
     </div>
   </div>
-</footer>
-
-
-<!-- Booking Modal (simple) -->
-<div id="bookingModal" data-aos="fade-up" class="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center hidden z-50">
-  <div class="bg-white rounded-lg w-full max-w-md p-6">
-    <h3 class="text-lg font-semibold mb-2">Book Class</h3>
-    <p id="bookingTitle" class="text-sm text-slate-600 mb-4"></p>
-
-    <form id="bookingForm" class="space-y-3">
-      <input type="text" name="name" placeholder="Your name" required class="w-full border rounded px-3 py-2" />
-      <input type="email" name="email" placeholder="Email" required class="w-full border rounded px-3 py-2" />
-      <div class="flex gap-2">
-        <button type="submit" class="bg-sky-600 text-white px-4 py-2 rounded">Confirm Booking</button>
-        <button type="button" class="border px-4 py-2 rounded" onclick="closeBooking()">Cancel</button>
-      </div>
-    </form>
-  </div>
-</div>
-
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-<script>
-  AOS.init({
-    duration: 1000, // animation duration in ms
-    once: false, // whether animation should happen only once
-    offset: 100, // how far the element should be from viewport before it starts animating
-  });
-</script>
-
-<script src="BigWhalesFitness.js"></script>
+  
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000, // animation duration in ms
+      once: false, // whether animation should happen only once
+      offset: 100, // how far the element should be from viewport before it starts animating
+    });
+  </script>
+  
+  <script src="BigWhalesFitness.js"></script>
 </body>
 </html>
